@@ -70,6 +70,7 @@ body {
 }
 
 #menu-icon {
+    position: relative;
     font-size: 3.6rem;
     color: var(--text-color);
     cursor: pointer;
@@ -215,7 +216,7 @@ section {
 
 .home-sci {
     position: absolute;
-    bottom: 60px;
+    bottom: 4rem;
     /* top: 58rem; */
     width: 170px;
     display: flex;
@@ -401,6 +402,9 @@ span{
 .education-content .content h3{
     font-size: 2rem;
 }
+.education-content .content h2{
+    font-size: 1.6rem;
+}
 
 .education-content .content p{
     font-size: 1.6rem;
@@ -509,7 +513,7 @@ span{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%; /* Ensure columns take the same height */
+    height: 100%; 
 }
 
 .skills-column .title {
@@ -625,7 +629,9 @@ span{
 }
 
 .logo .animate,
-.navbar .animate{
+.navbar .animate,
+#menu-icon .animate,
+.home.show-animate .animate{
     animation: showRight 1s ease forwards;
     animation-delay: calc(.3s * var(--i));
 }
@@ -642,7 +648,7 @@ span{
     }
 
     section{
-        padding: 0 4%;
+        padding: 10rem 4% 2rem;
     }
 
     .home {
@@ -669,6 +675,7 @@ span{
         padding: 1rem 4%;
         background: var(--main-color);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+        z-index: 1;
         transition: .25s ease;
         transition-delay: .25s;
     }
@@ -732,15 +739,19 @@ span{
         width: 160px;
     }
     .home-sci a{
+        /* margin-top: 20px; */
         width: 38px;
         height: 38px;
     }
 }
 
 @media (max-width:462px) {
+     
+      
     .home-content h1{
         font-size: 5.2rem;
     }
+   
     .education {
         padding: 10rem 4% 5rem 5%;
     }
@@ -756,6 +767,8 @@ span{
     }
 }
 
+
+
 @media (max-width: 371px){
     .home{
         justify-content: center;
@@ -768,6 +781,11 @@ span{
     }
     .home-content h1{
         font-size: 5rem;
+    }
+    .home-sci a{
+        margin-top: 20px;
+        width: 38px;
+        height: 38px;
     }
 }
 
@@ -806,3 +824,5 @@ span{
         width: 0;
     }
 }
+
+
